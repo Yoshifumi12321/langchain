@@ -1,0 +1,10 @@
+# for fast api
+fastapi
+pydantic
+uvicorn
+openai
+langchain
+chromadb
+python-multipart
+pypdf
+tiktoken
