@@ -13,7 +13,13 @@ streamlit run streamlit_langchain.py
 1. PDFの読み込み&ベクトル化して保存
 2. PDFの内容をもとに回答
 
-呼び出し方法
+起動方法
+```bash
+cd <langchainのローカルリポジトリ>
+uvicorn api.pdf_vectorstore:api --reload
+```
+
+curlでリクエスト方法
 ```bash
 # PDFのアップロードとベクトル化
 curl -X POST -F 'file=@<任意のファイル(PDF)>' http://127.0.0.1:8000/pdf
