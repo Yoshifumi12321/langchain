@@ -13,6 +13,13 @@ streamlit run streamlit_langchain.py
 1. PDFの読み込み&ベクトル化して保存
 2. PDFの内容をもとに回答
 
+OpenAI API設定
+下記Dockerfileの<your_api_key>にAPIトークンを置換する
+https://github.com/Yoshifumi12321/langchain/blob/main/api/Dockerfile
+```bash
+ENV OPENAI_API_KEY <your_api_key>
+```
+
 起動方法
 ```bash
 cd <langchainのローカルリポジトリ>
