@@ -77,8 +77,9 @@ with st.form("my_forms"):
             "query" : user_message
         }
         st.markdown(json_data)
-        st.session_state.past.append(user_message)
+        
         response = requests.post('http://127.0.0.1:8000/chat', data = json.dumps(json_data) )
+        st.session_state.past.append(user_message)
         st.session_state.generated.append(response)
 
     if st.session_state['generated']:
