@@ -22,7 +22,7 @@ import tempfile
 
 api = FastAPI()
 
-os.environ["OPENAI_API_KEY"] = '<input_your_api_key>'
+#os.environ["OPENAI_API_KEY"] = '<input_your_api_key>'
 model_name = "text-davinci-002"
 
 # ######################################

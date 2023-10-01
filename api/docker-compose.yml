@@ -1,0 +1,11 @@
+version: "2.0"
+
+services:
+  app:
+    container_name: FastAPI
+    build: .
+    volumes:
+      - ./app:/var/www/html
+    ports:
+      - 8080:8080
+    command: uvicorn pdf_vectorstore:api --reload --host 0.0.0.0 --port 8080

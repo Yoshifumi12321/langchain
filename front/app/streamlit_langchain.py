@@ -9,22 +9,7 @@ if "past" not in st.session_state:
 
 st.title("LangChain検証")
 
-from langchain import OpenAI, ConversationChain
-import openai
 import os
-
-import platform
-import openai
-import chromadb
-import langchain
-from langchain.llms import OpenAI
-
-from langchain.embeddings.openai import OpenAIEmbeddings
-from langchain.vectorstores import Chroma
-from langchain.text_splitter import CharacterTextSplitter
-from langchain.chat_models import ChatOpenAI
-from langchain.chains import ConversationalRetrievalChain
-from langchain.document_loaders import PyPDFLoader
 
 import json
 import requests
@@ -33,6 +18,7 @@ import tempfile
 from pathlib import Path
 import base64
 
+END_POINT = "http://54.248.123.248:8080"
 
 # 参考：https://shunyaueta.com/posts/2021-07-08/
 def show_pdf(file_path:str):
@@ -59,7 +45,7 @@ if file:
         pdftmpfile = f'{tmp_file.name}.pdf'
         fp = Path(pdftmpfile)
         fp.write_bytes(file.getvalue())
-        response = requests.post('http://127.0.0.1:8000/pdf', files={'file': open(pdftmpfile, 'rb')})
+        response = requests.post(f'{END_POINT}/pdf', files={'file': open(pdftmpfile, 'rb')})
         
         st.markdown(f'{tmp_file.name} をアップロードしました.')
 
@@ -77,8 +63,7 @@ with st.form("my_forms"):
             "query" : user_message
         }
         st.markdown(json_data)
-        
-        response = requests.post('http://127.0.0.1:8000/chat', data = json.dumps(json_data) )
+        response = requests.post(f'{END_POINT}/chat', data = json.dumps(json_data) )
         st.session_state.past.append(user_message)
         st.session_state.generated.append(response)
 
