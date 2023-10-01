@@ -163,3 +163,8 @@ chroma_db/28d93071-8f51-4e71-ae5c-92b40edc54cd/data_level0.bin
 chroma_db/28d93071-8f51-4e71-ae5c-92b40edc54cd/header.bin
 chroma_db/28d93071-8f51-4e71-ae5c-92b40edc54cd/length.bin
 chroma_db/28d93071-8f51-4e71-ae5c-92b40edc54cd/link_lists.bin
+api/app/chroma_db/chroma.sqlite3
+api/app/chroma_db/b4205c42-4cf4-4d2d-9ea6-cc996c178767/data_level0.bin
+api/app/chroma_db/b4205c42-4cf4-4d2d-9ea6-cc996c178767/header.bin
+api/app/chroma_db/b4205c42-4cf4-4d2d-9ea6-cc996c178767/length.bin
+api/app/chroma_db/b4205c42-4cf4-4d2d-9ea6-cc996c178767/link_lists.bin
