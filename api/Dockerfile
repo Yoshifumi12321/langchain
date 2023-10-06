@@ -1,6 +1,6 @@
 FROM python:3.9
 
-ENV OPENAI_API_KEY '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'
+ENV OPENAI_API_KEY '<your_api_key>'
 
 WORKDIR /var/www/html
 
