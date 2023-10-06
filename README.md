@@ -5,7 +5,9 @@ PDFの読み込み&ベクトル化して保存とLLMとの対話をインタラ�
 
 ### 起動方法
 ```bash
-streamlit run streamlit_langchain.py
+cd <langchainのローカルリポジトリ>/front #frontディレクトリに移動
+docker-compose build # Streamlitのイメージををbuild
+docker-compose up -d # Stremalitのイメージを起動 -d: コンソールログ非表示
 ```
 
 ## api/pdf_vectorstore.py
@@ -22,8 +24,9 @@ ENV OPENAI_API_KEY <your_api_key>
 
 ### 起動方法
 ```bash
-cd <langchainのローカルリポジトリ>
-uvicorn api.pdf_vectorstore:api --reload
+cd <langchainのローカルリポジトリ>/api #apiディレクトリに移動
+docker-compose build # FastAPIのイメージををbuild
+docker-compose up -d # FastAPIのイメージを起動 -d: コンソールログ非表示
 ```
 
 ### curlでリクエスト方法
