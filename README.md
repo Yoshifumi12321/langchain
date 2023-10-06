@@ -1,4 +1,6 @@
 # langchain
+起動すると`http://localhost:8501`でwebアプリにアクセスできるようになります。
+
 ## streamlit_langchain.py
 PDFの読み込み&ベクトル化して保存とLLMとの対話をインタラクティブに行えるアプリ
 <img width="764" alt="image" src="https://github.com/Yoshifumi12321/langchain/assets/40589677/37db53f1-bf70-4936-8ebb-5d1bc931a96f">
