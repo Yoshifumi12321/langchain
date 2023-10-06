@@ -69,6 +69,7 @@ with st.form("my_forms"):
         st.markdown(json_data)
         st.session_state.past.append(user_message)
         response = requests.post(f'{END_POINT}/chat', data = json.dumps(json_data), headers=headers)
+
         st.session_state.generated.append(response)
 
     if st.session_state['generated']:
