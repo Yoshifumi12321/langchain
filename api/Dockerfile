@@ -1,6 +1,6 @@
 FROM python:3.9
 
-ENV OPENAI_API_KEY <your_api_key>
+ENV OPENAI_API_KEY '<your_api_key>'
 
 WORKDIR /var/www/html
 
