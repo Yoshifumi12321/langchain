@@ -5,4 +5,4 @@ jobs:
     runs-on:
       - codebuild-maeda-pr-agent-${{ github.run_id }}-${{ github.run_attempt }}
     steps:
-      - run: echo "Hello World"
+      - run: echo "Hello World by github actions"
