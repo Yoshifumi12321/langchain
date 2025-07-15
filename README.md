@@ -38,3 +38,4 @@ curl -X POST -F 'file=@<任意のファイル(PDF)>' http://127.0.0.1:8000/pdf
 # 対話
 curl -X POST -H 'Content-type: application/json' --data '{"query":"~について教えて"}' 'http://127.0.0.1:8000/chat'
 ```
+
